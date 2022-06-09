@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemsInsight.RadarLibrary
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemsInsight.Core", "SystemsInsight.Core\SystemsInsight.Core.csproj", "{227C1703-1609-4A25-A378-5F8B99666A82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemsInsight.MathLibrary.Tests", "SystemsInsight.MathLibrary.Tests\SystemsInsight.MathLibrary.Tests.csproj", "{C3304E44-F95C-46EB-A019-44E62DE697DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{227C1703-1609-4A25-A378-5F8B99666A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{227C1703-1609-4A25-A378-5F8B99666A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{227C1703-1609-4A25-A378-5F8B99666A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3304E44-F95C-46EB-A019-44E62DE697DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3304E44-F95C-46EB-A019-44E62DE697DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3304E44-F95C-46EB-A019-44E62DE697DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3304E44-F95C-46EB-A019-44E62DE697DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

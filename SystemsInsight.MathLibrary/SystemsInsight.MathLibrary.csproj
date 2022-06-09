@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Matrix\" />
+    <Folder Include="Signal\" />
+  </ItemGroup>
+
 </Project>
