@@ -8,7 +8,7 @@ namespace SystemsInsight.MathLibrary
 {
     public partial class Vector
     {
-        public static Vector operator +(int x, Vector y)
+        public static Vector operator +(double x, Vector y)
         {
             var result = new Vector(y.NumberOfElements);
 
@@ -20,7 +20,7 @@ namespace SystemsInsight.MathLibrary
             return result;
         }
 
-        public static Vector operator +(Vector x, int y)
+        public static Vector operator +(Vector x, double y)
         {
             var result = new Vector(x.NumberOfElements);
 
@@ -56,7 +56,7 @@ namespace SystemsInsight.MathLibrary
             return result;
         }
 
-        public static Vector operator -(int x, Vector y)
+        public static Vector operator -(double x, Vector y)
         {
             var result = new Vector(y.NumberOfElements);
 
@@ -68,7 +68,7 @@ namespace SystemsInsight.MathLibrary
             return result;
         }
 
-        public static Vector operator -(Vector x, int y)
+        public static Vector operator -(Vector x, double y)
         {
             var result = new Vector(x.NumberOfElements);
 
@@ -92,7 +92,7 @@ namespace SystemsInsight.MathLibrary
             return result;
         }
 
-        public static Vector operator *(int x, Vector y)
+        public static Vector operator *(double x, Vector y)
         {
             var result = new Vector(y.NumberOfElements);
 
@@ -104,7 +104,7 @@ namespace SystemsInsight.MathLibrary
             return result;
         }
 
-        public static Vector operator *(Vector x, int y)
+        public static Vector operator *(Vector x, double y)
         {
             var result = new Vector(x.NumberOfElements);
 
@@ -128,7 +128,7 @@ namespace SystemsInsight.MathLibrary
             return result;
         }
 
-        public static Vector operator /(int x, Vector y)
+        public static Vector operator /(double x, Vector y)
         {
             var result = new Vector(y.NumberOfElements);
 
@@ -140,7 +140,7 @@ namespace SystemsInsight.MathLibrary
             return result;
         }
 
-        public static Vector operator /(Vector x, int y)
+        public static Vector operator /(Vector x, double y)
         {
             var result = new Vector(x.NumberOfElements);
 

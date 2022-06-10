@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SystemsInsight.MathLibrary.Signal
 {
-    public record IQSample
+    public record IQSampleData
     {
         public double Time { get; init; }
 
