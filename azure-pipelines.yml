@@ -3,40 +3,31 @@ trigger:
 - main
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-latest'
 
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
-
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
+- task: UseDotNet@2
+  displayName: 'Use .NET Core'
   inputs:
-    restoreSolution: '$(solution)'
+    version: 6.x
+    includePreviewVersions: true
     
-- task: VSBuild@1
+- task: DotNetCoreCLI@2
+  displayName: 'Build - $(buildConfiguration)'
   inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    command: 'build'
+    projects: 'SystemsInsight.RadarToolbox.sln'
+    arguments: '--configuration $(buildConfiguration)'
 
-- task: VSTest@2
+- task: DotNetCoreCLI@2
+  displayName: 'Run Tests'
   inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*tests*.dll
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    codeCoverageEnabled: true
-    testRunTitle: 'TestsRun'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'VSTest'
-    testResultsFiles: '**/TEST-*.xml'
-    testRunTitle: 'TestsPublish'
+    command: test
+    projects: |
+     **/*Tests/*.csproj 
+     !**/*Tests/*Rtsa*.csproj
+     !**/*Tests/*DAL*.csproj
+    arguments: '--configuration $(buildConfiguration)'
