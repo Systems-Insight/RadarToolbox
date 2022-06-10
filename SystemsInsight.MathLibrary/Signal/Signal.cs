@@ -1,4 +1,6 @@
-﻿namespace SystemsInsight.MathLibrary
+﻿using SystemsInsight.Core.CsvUtilities;
+
+namespace SystemsInsight.MathLibrary
 {
     public partial class Signal
     {
@@ -55,6 +57,56 @@
             Time = time;
             I = i;
             Q = q;
+        }
+
+        public IQSampleData[] ConverToSampleData()
+        {                
+            var data = new IQSampleData[NumberOfSamples];
+
+            for (int i = 0; i < NumberOfSamples; i++)
+            {
+                data[i] = new IQSampleData()
+                {
+                    Time = Time[i],
+                    I = I[i],
+                    Q = Q[i]
+                };
+            }
+
+            return data;
+        }
+
+        public static Signal ConvertFromSampleData(IQSampleData[] data)
+        {
+            var numberOfSamples = data.Length;
+
+            var signal = new Signal(data.Length);
+
+            for (int i = 0; i < numberOfSamples; i++)
+            {
+                signal.Time[i] = data[i].Time;
+                signal.I[i] = data[i].I;
+                signal.Q[i] = data[i].Q;
+            }
+
+            return signal;
+        }
+
+        public void WriteSignal(string fileName)
+        {
+            var data = ConverToSampleData().ToList();
+
+            data.WriteCsvFile(fileName);
+        }
+
+
+        public static Signal ReadSignal(string fileName)
+        {
+            var data = CsvUtilities.ReadCsvFile<IQSampleData>(fileName).ToArray();
+
+            var signal = Signal.ConvertFromSampleData(data);
+
+            return signal;
         }
     }
 }

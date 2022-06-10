@@ -10,4 +10,8 @@
     <Folder Include="Matrix\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SystemsInsight.Core\SystemsInsight.Core.csproj" />
+  </ItemGroup>
+
 </Project>
