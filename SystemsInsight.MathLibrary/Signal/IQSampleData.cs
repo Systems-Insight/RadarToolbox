@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SystemsInsight.MathLibrary.Signal
+namespace SystemsInsight.MathLibrary
 {
     public record IQSampleData
     {

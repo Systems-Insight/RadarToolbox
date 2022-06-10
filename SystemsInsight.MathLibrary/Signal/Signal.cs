@@ -1,6 +1,6 @@
-﻿namespace SystemsInsight.MathLibrary.Signal
+﻿namespace SystemsInsight.MathLibrary
 {
-    public class Signal
+    public partial class Signal
     {
         public Vector Time { get; set; }
 
@@ -41,6 +41,13 @@
             Time = new Vector();
             I = new Vector();
             Q = new Vector();
+        }
+
+        public Signal(int numberOfSamples)
+        {
+            Time = new Vector(numberOfSamples);
+            I = new Vector(numberOfSamples);
+            Q = new Vector(numberOfSamples);
         }
 
         public Signal(Vector time, Vector i, Vector q)

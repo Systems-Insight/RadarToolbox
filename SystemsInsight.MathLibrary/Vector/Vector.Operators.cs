@@ -88,5 +88,25 @@ namespace SystemsInsight.MathLibrary
 
             return result;
         }
+
+        public static Vector LinearlySpacedVector(double startValue, double endValue, double spacing = 1.0)
+        {
+            var interval = endValue - startValue;
+
+            var numberOfElements = (int)Math.Round(interval / spacing);
+
+            var result = new Vector(numberOfElements);
+
+            var value = startValue;
+
+            for (int i = 0; i < numberOfElements; i++)
+            {
+                result.Data[i] = value;
+
+                value += spacing;
+            }
+
+            return result;
+        }
     }
 }

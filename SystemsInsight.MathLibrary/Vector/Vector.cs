@@ -33,6 +33,31 @@ namespace SystemsInsight.MathLibrary
             set => Data[index] = value;
         }
 
+        public Vector this[int startIndex, int endIndex]
+        {
+            get
+                {
+                var numberOfElements = endIndex - startIndex + 1;
+
+                var result = new Vector(numberOfElements);
+
+                for (int i = 0; i<numberOfElements; i++)
+                {
+                    result.Data[i] = Data[i + startIndex];
+                }
+
+                return result;
+            }
+
+            set
+            {
+                for (int i = 0; i<value.NumberOfElements; i++)
+                {
+                    Data[i+startIndex] = value.Data[i];
+                }
+            }
+        }
+
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(this, obj))
