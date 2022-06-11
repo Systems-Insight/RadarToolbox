@@ -59,13 +59,13 @@ namespace SystemsInsight.MathLibrary
             Q = q;
         }
 
-        public IQSampleData[] ConverToSampleData()
+        public IQSampleDataExtended[] ConvertToSampleData()
         {                
-            var data = new IQSampleData[NumberOfSamples];
+            var data = new IQSampleDataExtended[NumberOfSamples];
 
             for (int i = 0; i < NumberOfSamples; i++)
             {
-                data[i] = new IQSampleData()
+                data[i] = new IQSampleDataExtended()
                 {
                     Time = Time[i],
                     I = I[i],
@@ -76,7 +76,7 @@ namespace SystemsInsight.MathLibrary
             return data;
         }
 
-        public static Signal ConvertFromSampleData(IQSampleData[] data)
+        public static Signal ConvertFromSampleData(IQSampleDataExtended[] data)
         {
             var numberOfSamples = data.Length;
 
@@ -94,7 +94,7 @@ namespace SystemsInsight.MathLibrary
 
         public void WriteSignal(string fileName)
         {
-            var data = ConverToSampleData().ToList();
+            var data = ConvertToSampleData().ToList();
 
             data.WriteCsvFile(fileName);
         }
@@ -102,7 +102,7 @@ namespace SystemsInsight.MathLibrary
 
         public static Signal ReadSignal(string fileName)
         {
-            var data = CsvUtilities.ReadCsvFile<IQSampleData>(fileName).ToArray();
+            var data = CsvUtilities.ReadCsvFile<IQSampleDataExtended>(fileName).ToArray();
 
             var signal = Signal.ConvertFromSampleData(data);
 
