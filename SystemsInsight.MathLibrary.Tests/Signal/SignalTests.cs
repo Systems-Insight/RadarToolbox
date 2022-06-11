@@ -16,9 +16,9 @@
             var fileName = @"c:\temp\Signal_1.csv";
 
             // Act:
-            //signal.WriteSignal(fileName);
+            signal.WriteSignal(fileName);
 
-            //var signal2 = Signal.ReadSignal(fileName);
+            var signal2 = Signal.ReadSignal(fileName);
 
             // Assert:
             Assert.Inconclusive();
