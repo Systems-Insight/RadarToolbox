@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemsInsight.MathLibrary", "SystemsInsight.MathLibrary\SystemsInsight.MathLibrary.csproj", "{39AB8AC0-6F78-4EFE-9A11-CBC20EBFBC7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemsInsight.MathLibrary", "SystemsInsight.MathLibrary\SystemsInsight.MathLibrary.csproj", "{39AB8AC0-6F78-4EFE-9A11-CBC20EBFBC7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemsInsight.RadarLibrary", "SystemsInsight.RadarLibrary\SystemsInsight.RadarLibrary.csproj", "{2723AFFC-D747-43BA-93B4-B10F2AB91B83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemsInsight.RadarLibrary", "SystemsInsight.RadarLibrary\SystemsInsight.RadarLibrary.csproj", "{2723AFFC-D747-43BA-93B4-B10F2AB91B83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemsInsight.Core", "SystemsInsight.Core\SystemsInsight.Core.csproj", "{227C1703-1609-4A25-A378-5F8B99666A82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemsInsight.Core", "SystemsInsight.Core\SystemsInsight.Core.csproj", "{227C1703-1609-4A25-A378-5F8B99666A82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemsInsight.MathLibrary.Tests", "SystemsInsight.MathLibrary.Tests\SystemsInsight.MathLibrary.Tests.csproj", "{C3304E44-F95C-46EB-A019-44E62DE697DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemsInsight.MathLibrary.Tests", "SystemsInsight.MathLibrary.Tests\SystemsInsight.MathLibrary.Tests.csproj", "{C3304E44-F95C-46EB-A019-44E62DE697DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemsInsight.Benchmarks", "SystemsInsight.Benchmarks\SystemsInsight.Benchmarks.csproj", "{DBD4D109-9DA3-4C3B-9ECD-32BB1183C859}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C3304E44-F95C-46EB-A019-44E62DE697DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3304E44-F95C-46EB-A019-44E62DE697DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3304E44-F95C-46EB-A019-44E62DE697DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBD4D109-9DA3-4C3B-9ECD-32BB1183C859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBD4D109-9DA3-4C3B-9ECD-32BB1183C859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBD4D109-9DA3-4C3B-9ECD-32BB1183C859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBD4D109-9DA3-4C3B-9ECD-32BB1183C859}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

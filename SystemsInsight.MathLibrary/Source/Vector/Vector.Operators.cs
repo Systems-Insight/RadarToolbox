@@ -108,5 +108,16 @@ namespace SystemsInsight.MathLibrary
 
             return result;
         }
+
+        public static Vector RandomVectorNormal(int numberOfSamples, double mean, double std)
+        {
+            var d = MathNet.Numerics.Distributions.Normal.WithMeanStdDev(mean, std);
+
+            var result = new Vector(numberOfSamples);
+
+            d.Samples(result.Data);
+
+            return result;
+        }
     }
 }
