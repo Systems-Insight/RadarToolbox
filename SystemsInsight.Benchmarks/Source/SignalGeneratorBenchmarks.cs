@@ -20,12 +20,12 @@ namespace SystemsInsight.Benchmarks
             var signal = SignalGenerator.EmptySignal(sampleRate, duration);
         }
 
-        [Benchmark]
-        public void GenerateRandomSignalNormal()
-        {
-            var meanNoisePower = 1.0;
+        //[Benchmark]
+        //public void GenerateRandomSignalNormal()
+        //{
+        //    var meanNoisePower = 1.0;
 
-            var signal = SignalGenerator.RandomNoise(sampleRate, duration, meanNoisePower);
-        }
+        //    var signal = SignalGenerator.RandomNoise(sampleRate, duration, meanNoisePower);
+        //}
     }
 }

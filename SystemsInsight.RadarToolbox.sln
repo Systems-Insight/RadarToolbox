@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemsInsight.Core", "Syst
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemsInsight.MathLibrary.Tests", "SystemsInsight.MathLibrary.Tests\SystemsInsight.MathLibrary.Tests.csproj", "{C3304E44-F95C-46EB-A019-44E62DE697DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemsInsight.Benchmarks", "SystemsInsight.Benchmarks\SystemsInsight.Benchmarks.csproj", "{DBD4D109-9DA3-4C3B-9ECD-32BB1183C859}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemsInsight.Benchmarks", "SystemsInsight.Benchmarks\SystemsInsight.Benchmarks.csproj", "{DBD4D109-9DA3-4C3B-9ECD-32BB1183C859}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemsInsight.Core.Tests", "SystemsInsight.Core.Tests\SystemsInsight.Core.Tests.csproj", "{18EB909D-915E-40B9-9B42-BCECF009DF99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{DBD4D109-9DA3-4C3B-9ECD-32BB1183C859}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBD4D109-9DA3-4C3B-9ECD-32BB1183C859}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBD4D109-9DA3-4C3B-9ECD-32BB1183C859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18EB909D-915E-40B9-9B42-BCECF009DF99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18EB909D-915E-40B9-9B42-BCECF009DF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18EB909D-915E-40B9-9B42-BCECF009DF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18EB909D-915E-40B9-9B42-BCECF009DF99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

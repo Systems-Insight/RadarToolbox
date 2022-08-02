@@ -1,4 +1,4 @@
-﻿using SystemsInsight.Core.CsvUtilities;
+﻿using SystemsInsight.Core;
 
 namespace SystemsInsight.MathLibrary
 {

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SystemsInsight.Core.CsvUtilities
+namespace SystemsInsight.Core
 {
     public static class CsvUtilities
     {
